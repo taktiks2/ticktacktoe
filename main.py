@@ -81,7 +81,7 @@ def click(event):
 
 def computer():
     global turn
-    for y in range(3):
+    for y in range(3):   #置いたら勝てるマスを探す
         for x in range(3):
             if board[y][x] == 0:
                 board[y][x] = 2
@@ -90,7 +90,7 @@ def computer():
                     turn += 1
                     return
                 board[y][x] = 0
-    for y in range(3):
+    for y in range(3):   #置いたら邪魔できるマスを探す
         for x in range(3):
             if board[y][x] == 0:
                 board[y][x] = 1
